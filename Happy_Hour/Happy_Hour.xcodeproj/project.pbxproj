@@ -14,6 +14,8 @@
 		3FE1BE7720795A72001BCB72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1BE7520795A72001BCB72 /* LaunchScreen.storyboard */; };
 		3FE1BE8220795A72001BCB72 /* Happy_HourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1BE8120795A72001BCB72 /* Happy_HourTests.swift */; };
 		3FE1BE8D20795A72001BCB72 /* Happy_HourUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1BE8C20795A72001BCB72 /* Happy_HourUITests.swift */; };
+		3FE1BE9D2079661E001BCB72 /* ReviewTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1BE9C2079661E001BCB72 /* ReviewTableVC.swift */; };
+		3FE1BE9F20796C18001BCB72 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1BE9E20796C18001BCB72 /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		3FE1BE8820795A72001BCB72 /* Happy_HourUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Happy_HourUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE1BE8C20795A72001BCB72 /* Happy_HourUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Happy_HourUITests.swift; sourceTree = "<group>"; };
 		3FE1BE8E20795A72001BCB72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FE1BE9C2079661E001BCB72 /* ReviewTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableVC.swift; sourceTree = "<group>"; };
+		3FE1BE9E20796C18001BCB72 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +101,9 @@
 		3FE1BE6B20795A72001BCB72 /* Happy_Hour */ = {
 			isa = PBXGroup;
 			children = (
+				3FE1BE9B207965FD001BCB72 /* ViewControllers */,
+				3FE1BE9A207965F0001BCB72 /* Models */,
 				3FE1BE6C20795A72001BCB72 /* AppDelegate.swift */,
-				3FE1BE6E20795A72001BCB72 /* ViewController.swift */,
 				3FE1BE7020795A72001BCB72 /* Main.storyboard */,
 				3FE1BE7320795A72001BCB72 /* Assets.xcassets */,
 				3FE1BE7520795A72001BCB72 /* LaunchScreen.storyboard */,
@@ -123,6 +128,23 @@
 				3FE1BE8E20795A72001BCB72 /* Info.plist */,
 			);
 			path = Happy_HourUITests;
+			sourceTree = "<group>";
+		};
+		3FE1BE9A207965F0001BCB72 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3FE1BE9B207965FD001BCB72 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3FE1BE6E20795A72001BCB72 /* ViewController.swift */,
+				3FE1BE9C2079661E001BCB72 /* ReviewTableVC.swift */,
+				3FE1BE9E20796C18001BCB72 /* InfoViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +283,8 @@
 			files = (
 				3FE1BE6F20795A72001BCB72 /* ViewController.swift in Sources */,
 				3FE1BE6D20795A72001BCB72 /* AppDelegate.swift in Sources */,
+				3FE1BE9F20796C18001BCB72 /* InfoViewController.swift in Sources */,
+				3FE1BE9D2079661E001BCB72 /* ReviewTableVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
