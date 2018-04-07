@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3FE1BE6D20795A72001BCB72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1BE6C20795A72001BCB72 /* AppDelegate.swift */; };
+		3FE1BE6F20795A72001BCB72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1BE6E20795A72001BCB72 /* ViewController.swift */; };
+		3FE1BE7220795A72001BCB72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1BE7020795A72001BCB72 /* Main.storyboard */; };
+		3FE1BE7420795A72001BCB72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1BE7320795A72001BCB72 /* Assets.xcassets */; };
+		3FE1BE7720795A72001BCB72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1BE7520795A72001BCB72 /* LaunchScreen.storyboard */; };
+		3FE1BE8220795A72001BCB72 /* Happy_HourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1BE8120795A72001BCB72 /* Happy_HourTests.swift */; };
+		3FE1BE8D20795A72001BCB72 /* Happy_HourUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1BE8C20795A72001BCB72 /* Happy_HourUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3FE1BE7E20795A72001BCB72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FE1BE6120795A71001BCB72 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FE1BE6820795A72001BCB72;
+			remoteInfo = Happy_Hour;
+		};
+		3FE1BE8920795A72001BCB72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FE1BE6120795A71001BCB72 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FE1BE6820795A72001BCB72;
+			remoteInfo = Happy_Hour;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3FE1BE6920795A72001BCB72 /* Happy_Hour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Happy_Hour.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FE1BE6C20795A72001BCB72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3FE1BE6E20795A72001BCB72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3FE1BE7120795A72001BCB72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3FE1BE7320795A72001BCB72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3FE1BE7620795A72001BCB72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3FE1BE7820795A72001BCB72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FE1BE7D20795A72001BCB72 /* Happy_HourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Happy_HourTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FE1BE8120795A72001BCB72 /* Happy_HourTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Happy_HourTests.swift; sourceTree = "<group>"; };
+		3FE1BE8320795A72001BCB72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FE1BE8820795A72001BCB72 /* Happy_HourUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Happy_HourUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FE1BE8C20795A72001BCB72 /* Happy_HourUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Happy_HourUITests.swift; sourceTree = "<group>"; };
+		3FE1BE8E20795A72001BCB72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3FE1BE6620795A72001BCB72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FE1BE7A20795A72001BCB72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FE1BE8520795A72001BCB72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3FE1BE6020795A71001BCB72 = {
+			isa = PBXGroup;
+			children = (
+				3FE1BE6B20795A72001BCB72 /* Happy_Hour */,
+				3FE1BE8020795A72001BCB72 /* Happy_HourTests */,
+				3FE1BE8B20795A72001BCB72 /* Happy_HourUITests */,
+				3FE1BE6A20795A72001BCB72 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3FE1BE6A20795A72001BCB72 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FE1BE6920795A72001BCB72 /* Happy_Hour.app */,
+				3FE1BE7D20795A72001BCB72 /* Happy_HourTests.xctest */,
+				3FE1BE8820795A72001BCB72 /* Happy_HourUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3FE1BE6B20795A72001BCB72 /* Happy_Hour */ = {
+			isa = PBXGroup;
+			children = (
+				3FE1BE6C20795A72001BCB72 /* AppDelegate.swift */,
+				3FE1BE6E20795A72001BCB72 /* ViewController.swift */,
+				3FE1BE7020795A72001BCB72 /* Main.storyboard */,
+				3FE1BE7320795A72001BCB72 /* Assets.xcassets */,
+				3FE1BE7520795A72001BCB72 /* LaunchScreen.storyboard */,
+				3FE1BE7820795A72001BCB72 /* Info.plist */,
+			);
+			path = Happy_Hour;
+			sourceTree = "<group>";
+		};
+		3FE1BE8020795A72001BCB72 /* Happy_HourTests */ = {
+			isa = PBXGroup;
+			children = (
+				3FE1BE8120795A72001BCB72 /* Happy_HourTests.swift */,
+				3FE1BE8320795A72001BCB72 /* Info.plist */,
+			);
+			path = Happy_HourTests;
+			sourceTree = "<group>";
+		};
+		3FE1BE8B20795A72001BCB72 /* Happy_HourUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3FE1BE8C20795A72001BCB72 /* Happy_HourUITests.swift */,
+				3FE1BE8E20795A72001BCB72 /* Info.plist */,
+			);
+			path = Happy_HourUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3FE1BE6820795A72001BCB72 /* Happy_Hour */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FE1BE9120795A72001BCB72 /* Build configuration list for PBXNativeTarget "Happy_Hour" */;
+			buildPhases = (
+				3FE1BE6520795A72001BCB72 /* Sources */,
+				3FE1BE6620795A72001BCB72 /* Frameworks */,
+				3FE1BE6720795A72001BCB72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Happy_Hour;
+			productName = Happy_Hour;
+			productReference = 3FE1BE6920795A72001BCB72 /* Happy_Hour.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3FE1BE7C20795A72001BCB72 /* Happy_HourTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FE1BE9420795A72001BCB72 /* Build configuration list for PBXNativeTarget "Happy_HourTests" */;
+			buildPhases = (
+				3FE1BE7920795A72001BCB72 /* Sources */,
+				3FE1BE7A20795A72001BCB72 /* Frameworks */,
+				3FE1BE7B20795A72001BCB72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FE1BE7F20795A72001BCB72 /* PBXTargetDependency */,
+			);
+			name = Happy_HourTests;
+			productName = Happy_HourTests;
+			productReference = 3FE1BE7D20795A72001BCB72 /* Happy_HourTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3FE1BE8720795A72001BCB72 /* Happy_HourUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FE1BE9720795A72001BCB72 /* Build configuration list for PBXNativeTarget "Happy_HourUITests" */;
+			buildPhases = (
+				3FE1BE8420795A72001BCB72 /* Sources */,
+				3FE1BE8520795A72001BCB72 /* Frameworks */,
+				3FE1BE8620795A72001BCB72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FE1BE8A20795A72001BCB72 /* PBXTargetDependency */,
+			);
+			name = Happy_HourUITests;
+			productName = Happy_HourUITests;
+			productReference = 3FE1BE8820795A72001BCB72 /* Happy_HourUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3FE1BE6120795A71001BCB72 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = DeSimone.Federico;
+				TargetAttributes = {
+					3FE1BE6820795A72001BCB72 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					3FE1BE7C20795A72001BCB72 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3FE1BE6820795A72001BCB72;
+					};
+					3FE1BE8720795A72001BCB72 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3FE1BE6820795A72001BCB72;
+					};
+				};
+			};
+			buildConfigurationList = 3FE1BE6420795A71001BCB72 /* Build configuration list for PBXProject "Happy_Hour" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3FE1BE6020795A71001BCB72;
+			productRefGroup = 3FE1BE6A20795A72001BCB72 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3FE1BE6820795A72001BCB72 /* Happy_Hour */,
+				3FE1BE7C20795A72001BCB72 /* Happy_HourTests */,
+				3FE1BE8720795A72001BCB72 /* Happy_HourUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3FE1BE6720795A72001BCB72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FE1BE7720795A72001BCB72 /* LaunchScreen.storyboard in Resources */,
+				3FE1BE7420795A72001BCB72 /* Assets.xcassets in Resources */,
+				3FE1BE7220795A72001BCB72 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FE1BE7B20795A72001BCB72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FE1BE8620795A72001BCB72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3FE1BE6520795A72001BCB72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FE1BE6F20795A72001BCB72 /* ViewController.swift in Sources */,
+				3FE1BE6D20795A72001BCB72 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FE1BE7920795A72001BCB72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FE1BE8220795A72001BCB72 /* Happy_HourTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FE1BE8420795A72001BCB72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FE1BE8D20795A72001BCB72 /* Happy_HourUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3FE1BE7F20795A72001BCB72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FE1BE6820795A72001BCB72 /* Happy_Hour */;
+			targetProxy = 3FE1BE7E20795A72001BCB72 /* PBXContainerItemProxy */;
+		};
+		3FE1BE8A20795A72001BCB72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FE1BE6820795A72001BCB72 /* Happy_Hour */;
+			targetProxy = 3FE1BE8920795A72001BCB72 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3FE1BE7020795A72001BCB72 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FE1BE7120795A72001BCB72 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3FE1BE7520795A72001BCB72 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FE1BE7620795A72001BCB72 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3FE1BE8F20795A72001BCB72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3FE1BE9020795A72001BCB72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3FE1BE9220795A72001BCB72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Happy_Hour/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DeSimone.Federico.Happy-Hour";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3FE1BE9320795A72001BCB72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Happy_Hour/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DeSimone.Federico.Happy-Hour";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3FE1BE9520795A72001BCB72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Happy_HourTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DeSimone.Federico.Happy-HourTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Happy_Hour.app/Happy_Hour";
+			};
+			name = Debug;
+		};
+		3FE1BE9620795A72001BCB72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Happy_HourTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DeSimone.Federico.Happy-HourTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Happy_Hour.app/Happy_Hour";
+			};
+			name = Release;
+		};
+		3FE1BE9820795A72001BCB72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Happy_HourUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DeSimone.Federico.Happy-HourUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Happy_Hour;
+			};
+			name = Debug;
+		};
+		3FE1BE9920795A72001BCB72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Happy_HourUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DeSimone.Federico.Happy-HourUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Happy_Hour;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FE1BE6420795A71001BCB72 /* Build configuration list for PBXProject "Happy_Hour" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FE1BE8F20795A72001BCB72 /* Debug */,
+				3FE1BE9020795A72001BCB72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FE1BE9120795A72001BCB72 /* Build configuration list for PBXNativeTarget "Happy_Hour" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FE1BE9220795A72001BCB72 /* Debug */,
+				3FE1BE9320795A72001BCB72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FE1BE9420795A72001BCB72 /* Build configuration list for PBXNativeTarget "Happy_HourTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FE1BE9520795A72001BCB72 /* Debug */,
+				3FE1BE9620795A72001BCB72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FE1BE9720795A72001BCB72 /* Build configuration list for PBXNativeTarget "Happy_HourUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FE1BE9820795A72001BCB72 /* Debug */,
+				3FE1BE9920795A72001BCB72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3FE1BE6120795A71001BCB72 /* Project object */;
+}
