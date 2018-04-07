@@ -15,7 +15,7 @@ locations. This app is designed for beer enthusiasts that enjoy finding new venu
 
 ### Initial Sketches
 
-! [alt text](img/sketches.png)
+![alt text](img/sketches.png)
 
 ### Current Features
 
@@ -25,8 +25,8 @@ locations. This app is designed for beer enthusiasts that enjoy finding new venu
 4. Clicking on a list item will bring up its information screen
 5. Clicking the '+' will bring you to where the form screen will be to add a new review
 
-! [alt text](img/prototype1.0.png)
-! [alt text](img/prototype1.1.png)
-! [alt text](img/prototype1.2.png)
-! [alt text](img/prototype1.3.png)
+![alt text](img/prototype1.0.png)
+![alt text](img/prototype1.1.png)
+![alt text](img/prototype1.2.png)
+![alt text](img/prototype1.3.png)
 
