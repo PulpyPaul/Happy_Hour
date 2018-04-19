@@ -256,7 +256,11 @@
                                 <segue destination="cwY-Ct-X6V" kind="unwind" unwindAction="unwindWithCancelTappedWithSegue:" id="aJO-XP-KMt"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="KZk-99-07a"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="KZk-99-07a">
+                            <connections>
+                                <segue destination="cwY-Ct-X6V" kind="unwind" unwindAction="unwindWithDoneTappedWithSegue:" id="sEv-tF-ux1"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zho-Yd-vAu" userLabel="First Responder" sceneMemberID="firstResponder"/>
