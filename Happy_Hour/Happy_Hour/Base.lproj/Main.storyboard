@@ -31,7 +31,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="83G-N1-gIx"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" id="0Wd-pc-thU"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="satellite_in_orbit" selectedImage="satellite_in_orbit" id="0Wd-pc-thU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zyr-pG-8nI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -44,7 +44,8 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4kx-6B-9xA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.78818243740000005" green="0.64297091959999997" blue="0.25225025420000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.78818243740000005" green="0.64297091959999997" blue="0.25225025420000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="wD2-Og-DHW" kind="relationship" relationship="viewControllers" id="zaX-kn-X8G"/>
@@ -99,14 +100,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Review Description Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPB-Os-f87">
-                                <rect key="frame" x="93" y="112" width="188" height="21"/>
+                                <rect key="frame" x="87" y="113" width="201" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.78818243740000005" green="0.64297091959999997" blue="0.25225025420000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Eu2-Ng-4P9"/>
                     </view>
                 </viewController>
@@ -133,7 +134,7 @@
                                 <rect key="frame" x="10" y="107" width="121" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyv-Mq-nrM">
@@ -223,11 +224,6 @@
                                     <outlet property="delegate" destination="Zti-nh-5g2" id="WT6-OR-VMX"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ebv-bP-Qda">
-                                <rect key="frame" x="163" y="596" width="49" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Submit"/>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mq8-LU-Ysf">
                                 <rect key="frame" x="139" y="279" width="220" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -242,8 +238,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ebv-bP-Qda">
+                                <rect key="frame" x="153" y="592" width="68" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.78818243740000005" green="0.64297091959999997" blue="0.25225025420000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="8Ff-yX-88B"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Review" id="uON-B8-otG">
@@ -264,11 +268,11 @@
             </objects>
             <point key="canvasLocation" x="1840.8" y="348.57571214392806"/>
         </scene>
-        <!--List-->
+        <!--My Reviews-->
         <scene sceneID="fQf-yO-wz5">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mPd-xV-C60" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="List" id="J8S-P8-R3S"/>
+                    <tabBarItem key="tabBarItem" title="My Reviews" image="about" selectedImage="about" id="J8S-P8-R3S"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q3W-Ca-D5t">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -302,4 +306,8 @@
             <point key="canvasLocation" x="942" y="349"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="about" width="25" height="25"/>
+        <image name="satellite_in_orbit" width="25" height="25"/>
+    </resources>
 </document>
