@@ -12,7 +12,40 @@ import UIKit
 class ReviewTableVC : UITableViewController {
     
     @IBAction func unwindWithCancelTapped(segue: UIStoryboardSegue) {
+        print("Cancel tapped")
+    }
+    
+    @IBAction func unwindWithDoneTapped(segue: UIStoryboardSegue) {
         
+        // Creates review dictionary object with test values
+        let review = NSMutableDictionary()
+        review["barName"] = "McGregors"
+        review["ageGroup"] = 45
+        
+        // Gets a path reference for the review
+        let reviewPath = FileManager.filePathInDocumentsDirectory(filename: "reviews.json")
+        
+        // Creates JSON object from review object
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: review, options: [])
+            print(NSString(data: jsonData, encoding: 1)!)
+            
+            // Writes JSON data to file
+            if review.write(to: reviewPath, atomically: true) {
+                print("Saved Review!")
+            } else {
+                print("Failed to save review")
+            }
+        } catch let error{
+            print(error)
+            print("Could not convert data to json")
+        }
+
+        let result = FileManager.fileExistsInDocumentsDirectory(filename: "reviews.json")
+        print(reviewPath.path)
+        print("Path exists: \(result)")
+        
+        print("Done Tapped")
     }
     
     override func viewDidLoad() {
@@ -46,5 +79,11 @@ class ReviewTableVC : UITableViewController {
     
     @objc func addItem() {
         performSegue(withIdentifier: "addReviewSegue", sender: nil)
+    }
+    
+    func saveReview(barName: String, path: URL) throws {
+        
+        try barName.write(to: path, atomically: true, encoding: .utf8)
+        print("Saved to path: \(path)")
     }
 }
