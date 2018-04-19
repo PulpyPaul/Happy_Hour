@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F53B06C2089002100E07C1E /* ReviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F53B06B2089002100E07C1E /* ReviewData.swift */; };
+		3F53B06E2089018100E07C1E /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F53B06D2089018100E07C1E /* AppController.swift */; };
+		3F53B07020890F8800E07C1E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F53B06F20890F8800E07C1E /* TabBarController.swift */; };
 		3FD5E7D12088EC960071A1D0 /* MyFileFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD5E7D02088EC960071A1D0 /* MyFileFunctions.swift */; };
 		3FE1BE6D20795A72001BCB72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1BE6C20795A72001BCB72 /* AppDelegate.swift */; };
 		3FE1BE6F20795A72001BCB72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1BE6E20795A72001BCB72 /* ViewController.swift */; };
@@ -37,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F53B06B2089002100E07C1E /* ReviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewData.swift; sourceTree = SOURCE_ROOT; };
+		3F53B06D2089018100E07C1E /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
+		3F53B06F20890F8800E07C1E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		3FD5E7D02088EC960071A1D0 /* MyFileFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyFileFunctions.swift; path = "../../../../../Downloads/Bookmarker-start-2/Bookmarker/MyFileFunctions.swift"; sourceTree = "<group>"; };
 		3FE1BE6920795A72001BCB72 /* Happy_Hour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Happy_Hour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE1BE6C20795A72001BCB72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +125,7 @@
 				3FE1BE7320795A72001BCB72 /* Assets.xcassets */,
 				3FE1BE7520795A72001BCB72 /* LaunchScreen.storyboard */,
 				3FE1BE7820795A72001BCB72 /* Info.plist */,
+				3F53B06D2089018100E07C1E /* AppController.swift */,
 			);
 			path = Happy_Hour;
 			sourceTree = "<group>";
@@ -144,6 +151,7 @@
 		3FE1BE9A207965F0001BCB72 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3F53B06B2089002100E07C1E /* ReviewData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -154,6 +162,7 @@
 				3FE1BE6E20795A72001BCB72 /* ViewController.swift */,
 				3FE1BE9C2079661E001BCB72 /* ReviewTableVC.swift */,
 				3FE1BE9E20796C18001BCB72 /* InfoViewController.swift */,
+				3F53B06F20890F8800E07C1E /* TabBarController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -293,10 +302,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FD5E7D12088EC960071A1D0 /* MyFileFunctions.swift in Sources */,
+				3F53B07020890F8800E07C1E /* TabBarController.swift in Sources */,
+				3F53B06C2089002100E07C1E /* ReviewData.swift in Sources */,
 				3FE1BE6F20795A72001BCB72 /* ViewController.swift in Sources */,
 				3FE1BE6D20795A72001BCB72 /* AppDelegate.swift in Sources */,
 				3FE1BE9F20796C18001BCB72 /* InfoViewController.swift in Sources */,
 				3FE1BE9D2079661E001BCB72 /* ReviewTableVC.swift in Sources */,
+				3F53B06E2089018100E07C1E /* AppController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

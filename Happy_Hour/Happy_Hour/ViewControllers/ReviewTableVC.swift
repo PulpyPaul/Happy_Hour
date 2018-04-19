@@ -19,8 +19,7 @@ class ReviewTableVC : UITableViewController {
         
         // Creates review dictionary object with test values
         let review = NSMutableDictionary()
-        review["barName"] = "McGregors"
-        review["ageGroup"] = 45
+        review["reviews"] = ["testKey1", "testKey2"]
         
         // Gets a path reference for the review
         let reviewPath = FileManager.filePathInDocumentsDirectory(filename: "reviews.json")
