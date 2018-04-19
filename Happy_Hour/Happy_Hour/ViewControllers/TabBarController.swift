@@ -11,5 +11,31 @@ import UIKit
 
 class TabBarController: UITabBarController {
     
-    var appController: AppController!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // Gives the Table View Controller a reference to the app controller singleton
+        //let reviewVC = segue.destination.childViewControllers[0] as! ReviewTableVC
+        //reviewVC.appController = appController
+    }
+    
+    func loadData() {
+        guard let path = Bundle.main.url(forResource: "reviews", withExtension: "json") else {
+            print("Couldn't find reviews.json")
+            return
+        }
+        
+        do {
+            let decoder = JSONDecoder()
+            let data = try Data(contentsOf: path)
+            let reviewList = try decoder.decode(ReviewList.self, from: data)
+            ReviewData.sharedData.reviews = reviewList.reviews
+        } catch {
+            print("Failed to intialize json data")
+        }
+    }
 }

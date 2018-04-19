@@ -8,19 +8,4 @@
 
 import Foundation
 
-class AppController {
-    
-    // ivars
-    private var dataModel: ReviewData
-    
-    var reviewData: [Any] {
-        get {
-            return dataModel.reviewData
-        }
-    }
-    
-    // initializer
-    init(dataModel: ReviewData = AppDataUserDefaults()) {
-        self.dataModel = dataModel
-    }
-}
+
