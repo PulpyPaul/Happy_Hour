@@ -69,23 +69,6 @@ extension FileManager {
             print("Could not clear Documents folder: \(error)")
         }
     }
-    
-    //https://stackoverflow.com/questions/42550657/writing-json-file-programmatically-swift
-    func getUploadedFileSet(filename:String) {
-        if let path = Bundle.main.path(forResource: "assets/\(filename)", ofType: "json") {
-            do {
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
-                if let jsonResult = jsonResult as? Dictionary<String, AnyObject>, let person = jsonResult["person"] as? [Any] {
-                    // do stuff
-                }
-            } catch let error {
-                print("parse error: \(error.localizedDescription)")
-            }
-        } else {
-            print("Invalid filename/path.")
-        }
-    }
 }
 
 

@@ -17,33 +17,6 @@ class ReviewTableVC : UITableViewController {
     
     @IBAction func unwindWithDoneTapped(segue: UIStoryboardSegue) {
         
-        // Creates review dictionary object with test values
-        let review = NSMutableDictionary()
-        review["reviews"] = ["testKey1", "testKey2"]
-        
-        // Gets a path reference for the review
-        let reviewPath = FileManager.filePathInDocumentsDirectory(filename: "reviews.json")
-        
-        // Creates JSON object from review object
-        do {
-            let jsonData = try JSONSerialization.data(withJSONObject: review, options: [])
-            print(NSString(data: jsonData, encoding: 1)!)
-            
-            // Writes JSON data to file
-            if review.write(to: reviewPath, atomically: true) {
-                print("Saved Review!")
-            } else {
-                print("Failed to save review")
-            }
-        } catch let error{
-            print(error)
-            print("Could not convert data to json")
-        }
-
-        let result = FileManager.fileExistsInDocumentsDirectory(filename: "reviews.json")
-        print(reviewPath.path)
-        print("Path exists: \(result)")
-        
         print("Done Tapped")
     }
     
@@ -59,13 +32,13 @@ class ReviewTableVC : UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 1
+        return ReviewData.sharedData.reviews.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "simpleCell", for: indexPath)
-        cell.textLabel?.text = "Test"
+        cell.textLabel?.text = ReviewData.sharedData.reviews[indexPath.row].name
         return cell
     }
     

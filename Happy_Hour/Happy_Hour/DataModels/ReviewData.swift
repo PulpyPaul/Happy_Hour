@@ -8,49 +8,13 @@
 
 import Foundation
 
-protocol ReviewData {
+class ReviewData {
     
-    var reviewData: [Any] {get set}
+    static let sharedData = ReviewData()
     
-    func save()
-    func load()
-}
-
-class AppDataUserDefaults: ReviewData {
+    var reviews = [Review]()
     
-    // ivars
-    let defaults: UserDefaults
-    
-    var reviewData: [Any]
-    
-    // initializer
-    init(userDefaults: UserDefaults = UserDefaults.standard) {
-        defaults = userDefaults
-        
-        reviewData = ["Should change after intialization"]
-        
-        //https://stackoverflow.com/questions/24410881/reading-in-a-json-file-using-swift/30548130
-        if let path = Bundle.main.path(forResource: "reviews", ofType: "json") {
-            do {
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
-                if let jsonResult = jsonResult as? Dictionary<String, AnyObject>, let person = jsonResult["reviews"] as? [Any] {
-                    reviewData = person
-                }
-            } catch {
-                print("Error loading JSON Data")
-                reviewData = ["No data found!"]
-            }
-        }
-    }
-
-    // functions
-    func save() {
-        
-    }
-    
-    func load() {
+    private init() {
         
     }
 }
-

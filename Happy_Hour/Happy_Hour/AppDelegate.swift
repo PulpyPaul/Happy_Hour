@@ -17,11 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        if let tabBarController = window?.rootViewController as? TabBarController {
-            
-            let appController = AppController()
-            tabBarController.appController = appController
-        }
+//        if let tabBarController = window?.rootViewController as? TabBarController {
+//
+//            let appController = AppController()
+//            tabBarController.appController = appController
+//        }
         
         
         return true
