@@ -43,4 +43,7 @@ screen and icon, along with themed UI.
 ![alt text](img/prototype2.1.png)
 ![alt text](img/prototype2.2.png)
 ![alt text](img/prototype2.3.png)
+![alt text](img/prototype2.4.png)
+![alt text](img/prototype2.5.png)
+
 
