@@ -21,11 +21,14 @@ class ReviewTableVC : UITableViewController {
         // Creates the review object
         let review = Review(name: "testBar4", ageGroup: "18-25", address: "333 Test")
         
+        var reviewList = ReviewList()
+        reviewList.reviews.append(review)
+        
         // Gets a path reference for the review
         let reviewPath = FileManager.filePathInDocumentsDirectory(filename: "reviews.json")
         
         // Writes JSON data to review.json
-        if let encodedData = try? JSONEncoder().encode(review) {
+        if let encodedData = try? JSONEncoder().encode(reviewList) {
             do {
                 try encodedData.write(to: reviewPath)
                 let result = FileManager.fileExistsInDocumentsDirectory(filename: "reviews.json")

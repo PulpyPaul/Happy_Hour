@@ -10,6 +10,10 @@ import Foundation
 
 public struct ReviewList: Codable {
     var reviews: [Review]
+    
+    init() {
+        reviews = [Review]()
+    }
 }
 
 public class Review: NSObject, Codable {

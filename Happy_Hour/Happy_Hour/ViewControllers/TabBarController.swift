@@ -13,7 +13,7 @@ class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //loadData()
+        loadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
