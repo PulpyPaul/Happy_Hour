@@ -13,7 +13,7 @@ class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadData()
+        //loadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -24,10 +24,7 @@ class TabBarController: UITabBarController {
     }
     
     func loadData() {
-        guard let path = Bundle.main.url(forResource: "reviews", withExtension: "json") else {
-            print("Couldn't find reviews.json")
-            return
-        }
+        let path = FileManager.filePathInDocumentsDirectory(filename: "reviews.json")
         
         do {
             let decoder = JSONDecoder()
@@ -35,7 +32,7 @@ class TabBarController: UITabBarController {
             let reviewList = try decoder.decode(ReviewList.self, from: data)
             ReviewData.sharedData.reviews = reviewList.reviews
         } catch {
-            print("Failed to intialize json data")
+            print("Failed to load json data")
         }
     }
 }

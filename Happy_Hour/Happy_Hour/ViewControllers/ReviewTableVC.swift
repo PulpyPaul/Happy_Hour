@@ -13,9 +13,31 @@ class ReviewTableVC : UITableViewController {
     
     @IBAction func unwindWithCancelTapped(segue: UIStoryboardSegue) {
         print("Cancel tapped")
+        
     }
     
     @IBAction func unwindWithDoneTapped(segue: UIStoryboardSegue) {
+        
+        // Creates the review object
+        let review = Review(name: "testBar4", ageGroup: "18-25", address: "333 Test")
+        
+        // Gets a path reference for the review
+        let reviewPath = FileManager.filePathInDocumentsDirectory(filename: "reviews.json")
+        
+        // Writes JSON data to review.json
+        if let encodedData = try? JSONEncoder().encode(review) {
+            do {
+                try encodedData.write(to: reviewPath)
+                let result = FileManager.fileExistsInDocumentsDirectory(filename: "reviews.json")
+                print(reviewPath.path)
+                print("Path exists: \(result)")
+            }
+            catch {
+                print("Failed to write JSON data: \(error.localizedDescription)")
+            }
+        }
+        
+        loadData()
         
         print("Done Tapped")
     }
@@ -53,9 +75,16 @@ class ReviewTableVC : UITableViewController {
         performSegue(withIdentifier: "addReviewSegue", sender: nil)
     }
     
-    func saveReview(barName: String, path: URL) throws {
+    func loadData() {
+        let path = FileManager.filePathInDocumentsDirectory(filename: "reviews.json")
         
-        try barName.write(to: path, atomically: true, encoding: .utf8)
-        print("Saved to path: \(path)")
+        do {
+            let decoder = JSONDecoder()
+            let data = try Data(contentsOf: path)
+            let reviewList = try decoder.decode(ReviewList.self, from: data)
+            ReviewData.sharedData.reviews = reviewList.reviews
+        } catch {
+            print("Failed to load json data")
+        }
     }
 }
