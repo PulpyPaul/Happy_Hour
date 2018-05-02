@@ -43,6 +43,7 @@ class ReviewTableVC : UITableViewController {
         if let indexPath = tableView.indexPathForSelectedRow{
             let selectedRow = indexPath.row
             let infoVC = segue.destination as! InfoViewController
+            infoVC.dataIndex = selectedRow
         }
     }
 }
