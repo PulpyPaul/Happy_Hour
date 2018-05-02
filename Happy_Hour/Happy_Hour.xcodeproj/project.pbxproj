@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F3EBA012099205500029949 /* AddReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EBA002099205500029949 /* AddReviewVC.swift */; };
 		3F53B06C2089002100E07C1E /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F53B06B2089002100E07C1E /* Review.swift */; };
 		3F53B06E2089018100E07C1E /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F53B06D2089018100E07C1E /* AppController.swift */; };
 		3F53B07020890F8800E07C1E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F53B06F20890F8800E07C1E /* TabBarController.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F3EBA002099205500029949 /* AddReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewVC.swift; sourceTree = "<group>"; };
 		3F53B06B2089002100E07C1E /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Review.swift; path = Happy_Hour/DataModels/Review.swift; sourceTree = SOURCE_ROOT; };
 		3F53B06D2089018100E07C1E /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		3F53B06F20890F8800E07C1E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				3FE1BE9C2079661E001BCB72 /* ReviewTableVC.swift */,
 				3FE1BE9E20796C18001BCB72 /* InfoViewController.swift */,
 				3F53B06F20890F8800E07C1E /* TabBarController.swift */,
+				3F3EBA002099205500029949 /* AddReviewVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F3EBA012099205500029949 /* AddReviewVC.swift in Sources */,
 				3F53B07020890F8800E07C1E /* TabBarController.swift in Sources */,
 				3F53B0722089124700E07C1E /* MyFileFunctions.swift in Sources */,
 				3F53B06C2089002100E07C1E /* Review.swift in Sources */,

@@ -23,6 +23,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            tabBarController.appController = appController
 //        }
         
+        // -------------- Loads Review Data ------------------------------
+        let path = FileManager.filePathInDocumentsDirectory(filename: "reviews.json")
+        
+        do {
+            let decoder = JSONDecoder()
+            let data = try Data(contentsOf: path)
+            let reviewList = try decoder.decode(ReviewList.self, from: data)
+            ReviewData.sharedData.reviews = reviewList.reviews
+        } catch {
+            print("Failed to load json data")
+        }
         
         return true
     }
@@ -35,6 +46,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        
+        // --------------- Saves user data ---------------------------
+        var reviewList = ReviewList()
+        reviewList.reviews = ReviewData.sharedData.reviews
+        
+        // Gets a path reference for the review
+        let reviewPath = FileManager.filePathInDocumentsDirectory(filename: "reviews.json")
+        
+        // Writes JSON data to review.json
+        if let encodedData = try? JSONEncoder().encode(reviewList) {
+            do {
+                try encodedData.write(to: reviewPath)
+                print("Filed Saved")
+            } catch {
+                print("Failed to write JSON data: \(error.localizedDescription)")
+            }
+        }
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -47,6 +75,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        
+        // --------------- Saves user data ---------------------------
+        var reviewList = ReviewList()
+        reviewList.reviews = ReviewData.sharedData.reviews
+        
+        // Gets a path reference for the review
+        let reviewPath = FileManager.filePathInDocumentsDirectory(filename: "reviews.json")
+        
+        // Writes JSON data to review.json
+        if let encodedData = try? JSONEncoder().encode(reviewList) {
+            do {
+                try encodedData.write(to: reviewPath)
+                print("Filed Saved")
+            } catch {
+                print("Failed to write JSON data: \(error.localizedDescription)")
+            }
+        }
     }
 
 

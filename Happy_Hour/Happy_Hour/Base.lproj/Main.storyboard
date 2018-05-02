@@ -69,7 +69,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FKY-x4-zAR" id="Jlh-ir-NOB">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -77,12 +77,14 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="fdp-TB-hI7" id="0Hb-4o-G6D"/>
-                            <outlet property="delegate" destination="fdp-TB-hI7" id="9an-nt-Cek"/>
-                        </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Reviews" id="HCo-1z-bWw"/>
+                    <navigationItem key="navigationItem" title="My Reviews" id="HCo-1z-bWw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="UWo-0D-u25">
+                            <connections>
+                                <action selector="addReviewSegue:" destination="fdp-TB-hI7" id="nCB-65-lid"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="2O0-dM-Rcx" kind="presentation" identifier="addReviewSegue" id="PuD-kU-nqK"/>
                     </connections>
@@ -118,7 +120,7 @@
         <!--Add Review-->
         <scene sceneID="sEY-v3-w1o">
             <objects>
-                <viewController title="Add Review" id="Zti-nh-5g2" sceneMemberID="viewController">
+                <viewController title="Add Review" id="Zti-nh-5g2" customClass="AddReviewVC" customModule="Happy_Hour" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lsH-oh-La8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -193,36 +195,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oYo-Z2-bYO">
-                                <rect key="frame" x="139" y="459" width="220" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2H-rC-uOX">
-                                <rect key="frame" x="90" y="466" width="39" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rating (Out of 10)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jun-AE-Sco">
-                                <rect key="frame" x="16" y="522" width="115" height="16"/>
+                                <rect key="frame" x="16" y="467" width="115" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q6x-HD-s8Q">
-                                <rect key="frame" x="139" y="515" width="123" height="30"/>
+                                <rect key="frame" x="139" y="460" width="123" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="Zti-nh-5g2" id="WT6-OR-VMX"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mq8-LU-Ysf">
                                 <rect key="frame" x="139" y="279" width="220" height="30"/>
@@ -238,30 +223,37 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ebv-bP-Qda">
-                                <rect key="frame" x="153" y="592" width="68" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWD-DD-R8F">
+                                <rect key="frame" x="146" y="531" width="83" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitReview:" destination="Zti-nh-5g2" eventType="touchUpInside" id="tpv-9b-CFk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.78818243740000005" green="0.64297091959999997" blue="0.25225025420000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="8Ff-yX-88B"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Review" id="uON-B8-otG">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="SMU-I8-4n0">
+                        <barButtonItem key="leftBarButtonItem" title="Return" id="SMU-I8-4n0">
                             <connections>
-                                <segue destination="cwY-Ct-X6V" kind="unwind" unwindAction="unwindWithCancelTappedWithSegue:" id="aJO-XP-KMt"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="KZk-99-07a">
-                            <connections>
-                                <segue destination="cwY-Ct-X6V" kind="unwind" unwindAction="unwindWithDoneTappedWithSegue:" id="sEv-tF-ux1"/>
+                                <segue destination="cwY-Ct-X6V" kind="unwind" unwindAction="unwindWithReturnTappedWithSegue:" id="7dQ-5G-czI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="address" destination="puV-aa-7mM" id="7gQ-qf-mTg"/>
+                        <outlet property="age" destination="KYm-oI-xv3" id="LFe-pJ-LlC"/>
+                        <outlet property="atmosphere" destination="Mq8-LU-Ysf" id="KQC-CK-LPy"/>
+                        <outlet property="drinks" destination="BJs-pP-jxc" id="Ji4-GA-lch"/>
+                        <outlet property="name" destination="wgA-qk-TT7" id="3CY-07-gLR"/>
+                        <outlet property="rating" destination="q6x-HD-s8Q" id="qvh-Di-ate"/>
+                        <outlet property="specials" destination="yZ2-ry-Hhg" id="agG-Pk-RHW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zho-Yd-vAu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="cwY-Ct-X6V" userLabel="Exit" sceneMemberID="exit"/>

@@ -19,19 +19,31 @@ public struct ReviewList: Codable {
 public class Review: NSObject, Codable {
     
     var name: String
-    var ageGroup: String
+    var age: String
     var address: String
+    var atmosphere: String
+    var drinks: String
+    var specials: String
+    var rating: String
     
     enum CodingKeys: String, CodingKey {
         case name
-        case ageGroup
+        case age
         case address
+        case atmosphere
+        case drinks
+        case specials
+        case rating
     }
     
-    init(name: String, ageGroup: String, address: String) {
+    init(name: String, age: String, address: String, atmosphere: String, drinks: String, specials: String, rating: String) {
         self.name = name
-        self.ageGroup = ageGroup
+        self.age = age
         self.address = address
+        self.atmosphere = atmosphere
+        self.drinks = drinks
+        self.specials = specials
+        self.rating = rating
     }
     
     public required init(from decoder: Decoder) throws {
@@ -43,9 +55,12 @@ public class Review: NSObject, Codable {
             self.name = "No title found"
         }
         
-        self.ageGroup = try values.decode(String.self, forKey: .ageGroup)
-        
+        self.age = try values.decode(String.self, forKey: .age)
         self.address = try values.decode(String.self, forKey: .address)
+        self.atmosphere = try values.decode(String.self, forKey: .atmosphere)
+        self.drinks = try values.decode(String.self, forKey: .drinks)
+        self.specials = try values.decode(String.self, forKey: .specials)
+        self.rating = try values.decode(String.self, forKey: .rating)
     }
     
 }
