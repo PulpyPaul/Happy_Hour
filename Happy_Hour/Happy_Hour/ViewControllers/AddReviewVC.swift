@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MapKit
 
 class AddReviewVC : UIViewController {
 
@@ -31,5 +32,21 @@ class AddReviewVC : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        getCoordinate(addressString: "143 Vern Lane Cheektowaga NY")
+        
+    }
+    
+    func getCoordinate(addressString : String) {
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(addressString) { (placemarks, error) in
+            if error == nil {
+                if let placemark = placemarks?[0] {
+                    let location = placemark.location?.coordinate
+                    print(location!)
+                    return
+                }
+            }
+            
+        }
     }
 }
