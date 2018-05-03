@@ -12,7 +12,7 @@ import UIKit
 class ReviewTableVC : UITableViewController {
     
     @IBAction func unwindWithReturnTapped( segue: UIStoryboardSegue) {
-        tableView.reloadData()
+        
     }
     
     @IBAction func addReviewSegue(_ sender: UIBarButtonItem) {
@@ -21,6 +21,10 @@ class ReviewTableVC : UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

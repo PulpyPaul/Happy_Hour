@@ -15,6 +15,7 @@ class MapVC : UIViewController, MKMapViewDelegate {
     @IBOutlet weak var mapItem: MKMapView!
     
     let metersPerMile: Double = 1609.344
+    let mapScale: Double = 500.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,14 @@ class MapVC : UIViewController, MKMapViewDelegate {
         }
         
         mapItem.addAnnotations(ReviewData.sharedData.reviews as [MKAnnotation])
-        let myRegion = MKCoordinateRegionMakeWithDistance(ReviewData.sharedData.reviews[0].coordinate, metersPerMile * 100, metersPerMile * 100)
-        mapItem.setRegion(myRegion, animated: true)
+        
+        for review in ReviewData.sharedData.reviews {
+            if review.coordinate.latitude == 0 && review.coordinate.longitude == 0 {
+                mapItem.removeAnnotation(review)
+            } else {
+                let myRegion = MKCoordinateRegionMakeWithDistance(review.coordinate, metersPerMile * mapScale, metersPerMile * mapScale)
+                mapItem.setRegion(myRegion, animated: true)
+            }
+        }
     }
 }

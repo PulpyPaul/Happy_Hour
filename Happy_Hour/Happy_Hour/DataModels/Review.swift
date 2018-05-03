@@ -49,13 +49,50 @@ public class Review: NSObject, Codable {
     
     // --------------------- Initializers --------------------
     init(name: String, age: String, address: String, atmosphere: String, drinks: String, specials: String, rating: String, longitude: Double, latitude: Double) {
-        self.name = name
-        self.age = age
-        self.address = address
-        self.atmosphere = atmosphere
-        self.drinks = drinks
-        self.specials = specials
-        self.rating = rating
+        
+        // ------------- Gives N/A for any data not filled out --------------------
+        if (name == "") {
+            self.name = "N/A"
+        } else {
+            self.name = name
+        }
+        
+        if (age == "") {
+            self.age = "N/A"
+        } else {
+            self.age = age
+        }
+        
+        if (address == "") {
+            self.address = "N/A"
+        } else {
+            self.address = address
+        }
+        
+        if (atmosphere == "") {
+            self.atmosphere = "N/A"
+        } else {
+            self.atmosphere = atmosphere
+        }
+        
+        if (drinks == "") {
+            self.drinks = "N/A"
+        } else {
+            self.drinks = drinks
+        }
+        
+        if (specials == "") {
+            self.specials = "N/A"
+        } else {
+            self.specials = specials
+        }
+        
+        if (rating == "") {
+            self.rating = "N/A"
+        } else {
+            self.rating = rating
+        }
+        
         self.longitude = longitude
         self.latitude = latitude
     }

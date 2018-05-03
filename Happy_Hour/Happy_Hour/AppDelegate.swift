@@ -20,6 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // gets path reference to review.json
         let path = FileManager.filePathInDocumentsDirectory(filename: "reviews.json")
         
+        // creates test data
+        let testReview1 = Review(name: "MacGregor's", age: "20-30", address: "300 Jefferson Road Rochester NY", atmosphere: "Clasic Irish Pub", drinks: "Beer, Hard Cider", specials: "Special Beer", rating: "7", longitude: -77.650531000000001, latitude: 43.092409000000004)
+        
+        let testReview2 = Review(name: "Schramrocks Irish Pub", age: "18-25", address: "200 Park Point Drive Rochester NY", atmosphere: "Underaged raging college students", drinks: "Beer and liqour", specials: "Fishbowls", rating: "10", longitude: -77.655963, latitude: 43.091310100000001)
+
+        // Appends it to the data
+        ReviewData.sharedData.reviews.append(testReview1)
+        ReviewData.sharedData.reviews.append(testReview2)
+        
         // decodes data from reviws.json and assigns data to ReviewData singleton
         do {
             let decoder = JSONDecoder()
