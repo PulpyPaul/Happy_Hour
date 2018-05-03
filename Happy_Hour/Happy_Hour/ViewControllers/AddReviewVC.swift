@@ -20,20 +20,14 @@ class AddReviewVC : UIViewController {
     @IBOutlet weak var specials: UITextField!
     @IBOutlet weak var rating: UITextField!
     
+    var coordinate = CLLocationCoordinate2D()
+    
     @IBAction func submitReview(_ sender: Any) {
-        
-        //  Creates review object
-        let review = Review(name: name.text!, age: age.text!, address: address.text!, atmosphere: atmosphere.text!, drinks: drinks.text!, specials: specials.text!, rating: rating.text!)
-       
-        // Appends it to the data
-        ReviewData.sharedData.reviews.append(review)
+        getCoordinate(addressString: address.text!)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        getCoordinate(addressString: "143 Vern Lane Cheektowaga NY")
-        
     }
     
     func getCoordinate(addressString : String) {
@@ -42,11 +36,22 @@ class AddReviewVC : UIViewController {
             if error == nil {
                 if let placemark = placemarks?[0] {
                     let location = placemark.location?.coordinate
-                    print(location!)
-                    return
+                    self.coordinate = location!
+                    self.createReview()
                 }
+            } else {
+                self.coordinate = CLLocationCoordinate2D()
+                self.createReview()
             }
-            
         }
+    }
+    
+    func createReview() {
+        
+        //  Creates review object
+        let review = Review(name: name.text!, age: age.text!, address: address.text!, atmosphere: atmosphere.text!, drinks: drinks.text!, specials: specials.text!, rating: rating.text!, longitude: coordinate.longitude, latitude: coordinate.latitude)
+        
+        // Appends it to the data
+        ReviewData.sharedData.reviews.append(review)
     }
 }

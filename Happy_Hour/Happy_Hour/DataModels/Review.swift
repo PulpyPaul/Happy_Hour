@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import CoreLocation
+import MapKit
 
 public struct ReviewList: Codable {
     var reviews: [Review]
@@ -25,6 +27,8 @@ public class Review: NSObject, Codable {
     var drinks: String
     var specials: String
     var rating: String
+    var longitude : Double
+    var latitude: Double
     
     enum CodingKeys: String, CodingKey {
         case name
@@ -34,9 +38,11 @@ public class Review: NSObject, Codable {
         case drinks
         case specials
         case rating
+        case longitude
+        case latitude
     }
     
-    init(name: String, age: String, address: String, atmosphere: String, drinks: String, specials: String, rating: String) {
+    init(name: String, age: String, address: String, atmosphere: String, drinks: String, specials: String, rating: String, longitude: Double, latitude: Double) {
         self.name = name
         self.age = age
         self.address = address
@@ -44,6 +50,8 @@ public class Review: NSObject, Codable {
         self.drinks = drinks
         self.specials = specials
         self.rating = rating
+        self.longitude = longitude
+        self.latitude = latitude
     }
     
     public required init(from decoder: Decoder) throws {
@@ -61,7 +69,18 @@ public class Review: NSObject, Codable {
         self.drinks = try values.decode(String.self, forKey: .drinks)
         self.specials = try values.decode(String.self, forKey: .specials)
         self.rating = try values.decode(String.self, forKey: .rating)
+        self.latitude = try values.decode(Double.self, forKey: .latitude)
+        self.longitude = try values.decode(Double.self, forKey: .longitude)
+    }
+}
+
+extension Review: MKAnnotation {
+    public var coordinate: CLLocationCoordinate2D {
+        return CLLocationCoordinate2DMake(CLLocationDegrees(latitude),CLLocationDegrees(longitude))
     }
     
+    public var title: String? {
+        return name
+    }
 }
 
