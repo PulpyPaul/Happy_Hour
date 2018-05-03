@@ -41,8 +41,8 @@ class AddReviewVC : UIViewController {
                 if let placemark = placemarks?[0] {
                     let location = placemark.location?.coordinate
                     self.coordinate = location!
-                    print(location!)
                     self.createReview()
+                    self.dismiss(animated: true, completion: nil)
                 }
             } else {
                 self.coordinate = CLLocationCoordinate2D()
