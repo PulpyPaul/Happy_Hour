@@ -6,10 +6,12 @@
 //  Copyright © 2018 DeSimone.Federico. All rights reserved.
 //
 
+// ----------- Imports -----------------
 import Foundation
 import CoreLocation
 import MapKit
 
+// Codable struct for holding a list of reviews
 public struct ReviewList: Codable {
     var reviews: [Review]
     
@@ -18,8 +20,10 @@ public struct ReviewList: Codable {
     }
 }
 
+// Codable review class, the primary data model object
 public class Review: NSObject, Codable {
     
+    // ------------ ivars -----------------
     var name: String
     var age: String
     var address: String
@@ -30,6 +34,7 @@ public class Review: NSObject, Codable {
     var longitude : Double
     var latitude: Double
     
+    // Codable enums
     enum CodingKeys: String, CodingKey {
         case name
         case age
@@ -42,6 +47,7 @@ public class Review: NSObject, Codable {
         case latitude
     }
     
+    // --------------------- Initializers --------------------
     init(name: String, age: String, address: String, atmosphere: String, drinks: String, specials: String, rating: String, longitude: Double, latitude: Double) {
         self.name = name
         self.age = age
@@ -54,6 +60,7 @@ public class Review: NSObject, Codable {
         self.latitude = latitude
     }
     
+    // Init for decoding the data
     public required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         
@@ -74,6 +81,7 @@ public class Review: NSObject, Codable {
     }
 }
 
+// --------------- Extensions --------------------
 extension Review: MKAnnotation {
     public var coordinate: CLLocationCoordinate2D {
         return CLLocationCoordinate2DMake(CLLocationDegrees(latitude),CLLocationDegrees(longitude))
