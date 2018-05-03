@@ -15,7 +15,7 @@ class MapVC : UIViewController, MKMapViewDelegate {
     @IBOutlet weak var mapItem: MKMapView!
     
     let metersPerMile: Double = 1609.344
-    let mapScale: Double = 500.0
+    let mapScale: Double = 2.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
