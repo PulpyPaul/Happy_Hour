@@ -23,6 +23,10 @@ class MapVC : UIViewController, MKMapViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        if ReviewData.sharedData.reviews.count == 0 {
+            return
+        }
+        
         mapItem.addAnnotations(ReviewData.sharedData.reviews as [MKAnnotation])
         let myRegion = MKCoordinateRegionMakeWithDistance(ReviewData.sharedData.reviews[0].coordinate, metersPerMile * 100, metersPerMile * 100)
         mapItem.setRegion(myRegion, animated: true)
