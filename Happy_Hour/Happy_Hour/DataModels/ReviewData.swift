@@ -7,6 +7,7 @@
 //
 
 // ------------- Imports ---------------
+
 import Foundation
 
 // Singleton used to hold review data

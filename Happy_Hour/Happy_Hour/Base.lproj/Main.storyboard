@@ -441,7 +441,7 @@
                     <navigationItem key="navigationItem" title="Add Review" id="uON-B8-otG">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="SMU-I8-4n0">
                             <connections>
-                                <segue destination="cwY-Ct-X6V" kind="unwind" unwindAction="unwindWithReturnTappedWithSegue:" id="7dQ-5G-czI"/>
+                                <segue destination="cwY-Ct-X6V" kind="unwind" unwindAction="unwindWithCancelTappedWithSegue:" id="AWk-l7-2rN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

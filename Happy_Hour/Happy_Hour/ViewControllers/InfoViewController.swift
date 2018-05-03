@@ -6,10 +6,18 @@
 //  Copyright © 2018 DeSimone.Federico. All rights reserved.
 //
 
+// ------------------- Imports -----------------
 import Foundation
 import UIKit
 
 class InfoViewController: UIViewController {
+    
+    // ---------------- iVars ------------------
+    
+    // This value is assigned in ReviewTableVC when a user clicks on a selected cell
+    var reviewIndex = 0
+    
+    // -----------------IB Outlets -------------------
     
     @IBOutlet weak var nameText: UILabel!
     @IBOutlet weak var ageText: UILabel!
@@ -19,17 +27,18 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var specialsText: UILabel!
     @IBOutlet weak var ratingText: UILabel!
     
-    var dataIndex = 0
-    
+    // ---------------- View Controller Functions --------------
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameText.text = ReviewData.sharedData.reviews[dataIndex].name
-        ageText.text = ReviewData.sharedData.reviews[dataIndex].age
-        addressText.text = ReviewData.sharedData.reviews[dataIndex].address
-        atmosphereText.text = ReviewData.sharedData.reviews[dataIndex].atmosphere
-        drinkText.text = ReviewData.sharedData.reviews[dataIndex].drinks
-        specialsText.text = ReviewData.sharedData.reviews[dataIndex].specials
-        ratingText.text = ReviewData.sharedData.reviews[dataIndex].rating
+        // Assigns from review data model based on the selected index
+        
+        nameText.text = ReviewData.sharedData.reviews[reviewIndex].name
+        ageText.text = ReviewData.sharedData.reviews[reviewIndex].age
+        addressText.text = ReviewData.sharedData.reviews[reviewIndex].address
+        atmosphereText.text = ReviewData.sharedData.reviews[reviewIndex].atmosphere
+        drinkText.text = ReviewData.sharedData.reviews[reviewIndex].drinks
+        specialsText.text = ReviewData.sharedData.reviews[reviewIndex].specials
+        ratingText.text = ReviewData.sharedData.reviews[reviewIndex].rating
     }
 }
