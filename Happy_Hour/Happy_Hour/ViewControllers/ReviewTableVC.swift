@@ -36,6 +36,7 @@ class ReviewTableVC : UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "simpleCell", for: indexPath)
         cell.textLabel?.text = ReviewData.sharedData.reviews[indexPath.row].name
+        cell.textLabel?.textColor = UIColor(red: 221/255, green: 114/255, blue: 48/255, alpha: 1.0)
         return cell
     }
     
