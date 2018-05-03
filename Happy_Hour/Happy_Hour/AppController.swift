@@ -8,4 +8,7 @@
 
 import Foundation
 
-
+class AppController {
+    
+    //private var dataModel: ReviewData
+}
