@@ -33,7 +33,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="satellite_in_orbit" selectedImage="satellite_in_orbit" id="0Wd-pc-thU"/>
                     <connections>
-                        <outlet property="mapItem" destination="9ED-hh-YsB" id="v5B-Yh-bWm"/>
+                        <outlet property="mapView" destination="9ED-hh-YsB" id="c3S-16-NBd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zyr-pG-8nI" userLabel="First Responder" sceneMemberID="firstResponder"/>
