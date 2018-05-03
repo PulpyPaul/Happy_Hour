@@ -19,6 +19,7 @@ class AddReviewVC : UIViewController {
     @IBOutlet weak var drinks: UITextField!
     @IBOutlet weak var specials: UITextField!
     @IBOutlet weak var rating: UITextField!
+    @IBOutlet weak var submitButton: UIButton!
     
     var coordinate = CLLocationCoordinate2D()
     
@@ -28,6 +29,9 @@ class AddReviewVC : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        submitButton.backgroundColor = UIColor(red: 255/255, green: 192/255, blue: 127/255, alpha: 1.0)
+        submitButton.layer.cornerRadius = 10
     }
     
     func getCoordinate(addressString : String) {
